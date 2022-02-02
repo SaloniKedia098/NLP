@@ -1,17 +1,16 @@
-# NLP
 import re
 import streamlit as st
 
-#NLTK Packages
+
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize, sent_tokenize
 
-#SPACY Packages
+
 import spacy
 from spacy.lang.en.stop_words import STOP_WORDS
 
-#Function for NLTK
+
 def nltk_summarizer(docx):
     stopWords = set(stopwords.words("english"))
     words = word_tokenize(docx)
@@ -46,7 +45,6 @@ def nltk_summarizer(docx):
     summary = ' '.join(summary_sentences)
     return summary
 
-#Function for SPACY
 def spacy_summarizer(docx):
     #nlp=spacy.load('en_core_web_lg')
     #docx=nlp(docx)
